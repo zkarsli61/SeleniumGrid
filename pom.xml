@@ -64,9 +64,13 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <runOrder>Alphabetical</runOrder>
+                    <parallel>methods</parallel>
+                    <perCoreThreadCount>false</perCoreThreadCount>
+                    <threadCountMethods>10</threadCountMethods>
                     <includes>
-                        <include>**/CucumberRunner.java</include>
-                        <include>**/FailedRunner.java</include>
+<!--                        <include>**/CucumberRunner.java</include>-->
+<!--                        <include>**/FailedRunner.java</include>-->
+                        <include>**/RegressionRunner.java</include>
                     </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
@@ -99,7 +103,7 @@
 
     <profiles>
         <profile>
-            <id>RegressionRunner</id>
+            <id>Regression</id>
             <build>
                 <plugins>
                     <plugin>
@@ -107,10 +111,9 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>3.0.0-M3</version>
                         <configuration>
-
                             <parallel>methods</parallel>
                             <perCoreThreadCount>false</perCoreThreadCount>
-                            <threadCountMethods>4</threadCountMethods>
+                            <threadCountMethods>10</threadCountMethods>
 
                             <includes>
                                 <include>**/RegressionRunner.java</include>

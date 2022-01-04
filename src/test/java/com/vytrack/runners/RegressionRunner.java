@@ -8,8 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features/Activities",
                      "src/test/resources/features/fleet"
-
-
         },
         glue = "com/vytrack/step_definitions",
         dryRun = false,
@@ -22,4 +20,12 @@ import org.junit.runner.RunWith;
 
 
 public class RegressionRunner {
+
+        // kaç tane feature file varsa o kadar browser açılır. surefire config parameters
+//                    <parallel>methods</parallel>
+//                    <perCoreThreadCount>false</perCoreThreadCount>
+//                    <threadCountMethods>10</threadCountMethods>
+
+// Ayrı profile olarak da oluşturulabilir mvn test -P Reggresion
+
 }
