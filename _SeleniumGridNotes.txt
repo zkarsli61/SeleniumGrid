@@ -1,0 +1,34 @@
+What is Selenium Grid? 
+	https://www.browserstack.com/guide/selenium-grid-tutorial
+
+	Selenium Grid is a smart proxy server that makes it easy to run tests in parallel on multiple machines. 
+	This is done by routing commands to remote web browser instances, where one server acts as the hub. 
+	This hub routes test commands that are in JSON format to multiple registered Grid nodes.
+
+When should testers use Selenium Grid?
+
+	To run tests on multiple browsers and their versions, different devices, and operating systems
+	To reduce the time that a test suite takes to complete execution
+
+There are few websites that can make your life easier
+
+	https://saucelabs.com/
+	You can setuo grid on saucelabs in a few clicks. USe different browsers, versions, platforms
+	but it's not free, even though it's easy to setup and use.
+
+	https://www.browserstack.com/
+	Give your users a seamless experience by testing on 2000+ real devices and browsers.
+
+	Step 1: Installation
+	https://www.seleniumhq.org/download/
+
+	Step 2: Start Hub
+	java -jar selenium* -role hub
+
+	Step 3: Start Nodes
+	java -jar selenium* -role node -hub https://localhost:4444/grid/register
+
+	Step 4: Configure Nodes
+	https://github.com/SeleniumHQ/selenium/blob/selenium-2.53.0/java/server/src/org/openqa/grid/common/defaults/DefaultNode.json
+
+	
